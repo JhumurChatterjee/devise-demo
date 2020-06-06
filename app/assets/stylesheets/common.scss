@@ -5,3 +5,27 @@
 .error-email-check-info {
   color: #FF0000;
 }
+
+#error_explanation {
+  color: #FF0000;
+  border: 1px solid #FF0000;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px;
+
+  ul {
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 10px 30px;
+  }
+
+  .error-heading {
+    border: 1px solid #FF0000;
+    background-color: #FA8072;
+    color: #000000;
+    font-style: bold;
+    opacity: 0.8;
+    margin: 0;
+    border-radius: 8px;
+  }
+}

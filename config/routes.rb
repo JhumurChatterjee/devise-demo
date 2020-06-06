@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   end
 
   root "home#index"
+  resources :posts
+  resources :comments
 end

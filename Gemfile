@@ -11,6 +11,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem "bootsnap", ">= 1.1.0", require: false
+gem "will_paginate", "~> 3.1", ">= 3.1.6"
 gem "devise"
 
 group :development, :test, :staging do
