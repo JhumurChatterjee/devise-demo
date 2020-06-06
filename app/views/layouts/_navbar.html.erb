@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+  <div><a class="navbar-brand" href="/">Navbar</a></div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <% if current_user %>
+            <%= current_user.full_name %>
+          <% else %>
+            Actions
+          <% end %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if current_user %>
+            <%= link_to "Account Update", edit_user_registration_path, class: "dropdown-item" %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Sign In", new_user_session_path, class: "dropdown-item" %>
+          <% end %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
