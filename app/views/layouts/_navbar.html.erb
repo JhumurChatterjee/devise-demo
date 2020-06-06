@@ -18,6 +18,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% if current_user %>
             <%= link_to "Account Update", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "Posts", posts_path, class: "dropdown-item" %>
           <% else %>
             <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Sign In", new_user_session_path, class: "dropdown-item" %>

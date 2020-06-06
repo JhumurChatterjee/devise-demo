@@ -1,0 +1,32 @@
+<% provide(:title, "Posts") %>
+
+<header class="row row-header">
+  <h4 class="col s2">Posts(<%= @posts.count %>)</h4>
+</header>
+
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= show_link(post) %></td>
+        <td><%= post.title %></td>
+        <td><%= post.body.html_safe %></td>
+        <td>
+          <%= edit_icon_link(post) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @posts %>
